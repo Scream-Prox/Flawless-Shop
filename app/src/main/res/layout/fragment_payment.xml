@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PaymentFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/backBtn"
+        android:clickable="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        app:cardCornerRadius="30dp"
+        app:cardBackgroundColor="@color/colorRed">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:src="@drawable/arrow_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+
+            </ImageView>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/textSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите способ оплаты"
+        android:textSize="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/backBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvMastercard"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/textSelect"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/mastercard">
+
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPaypal"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/textSelect"
+        app:layout_constraintStart_toEndOf="@+id/cvMastercard"
+        app:layout_constraintEnd_toStartOf="@+id/cvApplePay">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:src="@drawable/paypal">
+
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvApplePay"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="12dp"
+
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/textSelect"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/applepay">
+
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/cardNumberTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Номер карты"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvMastercard">
+
+    </TextView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="#D9D9D9"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardNumberTv">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cardNumberEdit"
+            android:backgroundTint="#D9D9D9"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:hint="Card number"
+            android:textColorHint="#D9D9D9"
+            android:inputType="text"
+            android:paddingTop="12dp"
+            android:paddingLeft="16dp" />
+
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:id="@+id/cvvTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Код"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvCard">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/dateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="65dp"
+        android:text="Срок"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toEndOf="@+id/cvCVV"
+        app:layout_constraintTop_toBottomOf="@+id/cvCard">
+
+    </TextView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvCVV"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="#D9D9D9"
+        android:inputType="textPassword"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvvTv">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EditCVV"
+            android:backgroundTint="#D9D9D9"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:hint="CVV"
+            android:textColorHint="#D9D9D9"
+            android:inputType="text"
+            android:paddingTop="12dp"
+            android:paddingLeft="16dp" />
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvDate"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="#D9D9D9"
+        android:inputType="textPassword"
+
+        app:layout_constraintStart_toEndOf="@+id/cvCVV"
+        app:layout_constraintTop_toBottomOf="@+id/cvvTv">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EditDate"
+            android:backgroundTint="#D9D9D9"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:hint="CVV"
+            android:textColorHint="#D9D9D9"
+            android:inputType="text"
+            android:paddingTop="12dp"
+            android:paddingLeft="16dp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBtnPay"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/colorRed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnPay"
+            android:text="Оплатить"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </Button>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

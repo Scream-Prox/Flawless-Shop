@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/home_ic"
+        android:title="Главная"
+        />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/profile_ic"
+        android:title="Профиль"
+        />
+    <item
+        android:id="@+id/cartFragment"
+        android:icon="@drawable/cart_ic"
+        android:title="Корзина"
+        />
+    <item
+        android:id="@+id/helpFragment"
+        android:icon="@drawable/help_ic"
+        android:title="Помощь"
+        />
+</menu>
